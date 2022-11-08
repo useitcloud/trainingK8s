@@ -16,7 +16,7 @@ L'application est découpée en 5 micro-services :
 
 Pour construire et démarrer l'application en arrière-plan, utiliser la commande suivante :
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 Consulter l'état des conteneurs démarrés via `docker-compose ps`
@@ -28,7 +28,7 @@ Consulter l'interface `webui` en consultant l'URL [http://localhost:8000](http:/
 
 Il est maintenant possible d'augmenter le nombre de workers, pour agmenter la cadence. Pour cela on lance la commande :
 ```
-docker-compose scale worker=4
+docker compose up -d --scale worker=4
 ```
 
 Cela a pour effet d'instancier 4 conteneurs avec le service `worker` 
