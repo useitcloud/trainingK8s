@@ -1,0 +1,39 @@
+version: '3'
+services:
+  db:
+    image: mariadb:10
+    volumes:
+      ##
+      # Ajoutez un volume pour MariaDB data (répertoire /var/lib/mysql)
+      ##
+    restart: always
+    environment:
+      ##
+      # Ajoutez les variables d'environnement pour accés à la base MariaDB 
+      ##
+  dbadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"
+    environment:
+      ##
+      # Ajoutez les variables d'environnement pour MariaDB+PHPMyAdmin
+      ##
+    depends_on:
+      ##
+      # Ajouter les dépendances
+      ##
+
+  wordpress:
+    image: wordpress:latest
+    depends_on:
+      ##
+      # Ajouter les dépendances
+      ##
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      ##
+      # Ajoutez les variables d'environnement pour accés à la base MariaDB
+      ##
