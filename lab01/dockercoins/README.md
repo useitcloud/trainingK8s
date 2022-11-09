@@ -35,7 +35,3 @@ Cela a pour effet d'instancier 4 conteneurs avec le service `worker`
 
 Observer la nouvelle cadence sur `webui`... et constatez la différence !
 
-
-
-
-
