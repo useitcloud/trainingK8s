@@ -1,6 +1,6 @@
 ## Exercice bonus : si on scalait ?
 
-Cet "exercise" est un exemple montrant une façon de faire de la montée en charge sur l'un des services qui compose une application dockerisée. Pour cela, nous allons utiliser la commande `docker-compose scale`
+Cet "exercise" est un exemple montrant une façon de faire de la montée en charge sur l'un des services qui compose une application dockerisée. Pour cela, nous allons utiliser la commande `docker compose up -d --scale`
 
 L'application utilisée est tirée du J. Petazzoni (société Docker)
 
@@ -19,9 +19,9 @@ Pour construire et démarrer l'application en arrière-plan, utiliser la command
 docker compose up -d
 ```
 
-Consulter l'état des conteneurs démarrés via `docker-compose ps`
+Consulter l'état des conteneurs démarrés via `docker compose ps`
 
-Pour consulter la sortie standard de chaque service, utiliser la commande `docker-compose logs`
+Pour consulter la sortie standard de chaque service, utiliser la commande `docker compose logs`
 
 Consulter l'interface `webui` en consultant l'URL [http://localhost:8000](http://localhost:8000) et regarder le nombre de dockercoins créé par seconde
 
@@ -34,4 +34,3 @@ docker compose up -d --scale worker=4
 Cela a pour effet d'instancier 4 conteneurs avec le service `worker` 
 
 Observer la nouvelle cadence sur `webui`... et constatez la différence !
-

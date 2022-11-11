@@ -1,0 +1,5 @@
+Modifiez le manifeste « kuard-deployment.yaml »  avec la stratégie « Recreate »
+Déployer ce manifeste
+Appliquer une mise à jour vers l’image « gcr.io/kuar-demo/kuard-amd64:green » en ligne de commande
+Revenir en arrière juste en éditant l’objet « deployment » et effectuez la modification de l’image.
+Supprimez le « deployment » 
