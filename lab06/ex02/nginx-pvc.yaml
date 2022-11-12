@@ -1,0 +1,18 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx-pvc-pod
+spec:
+  volumes:
+    - name: pvc1
+      # Complétez la déclaration du volume
+      ...
+  containers:
+    - name: nginx-pv-container
+      image: nginx
+      ports:
+        - containerPort: 80
+          name: "http-server"
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: pvc1
