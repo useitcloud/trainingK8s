@@ -19,23 +19,23 @@ spec:
   selector: 
     matchLabels: 
       app: mariadb 
-    template: 
-      metadata: 
-        labels: 
-          app: mariadb 
-      spec: 
-        volumes: 
-          - name: mariadb-data 
-            persistentVolumeClaim: { claimName: mariadb-data } 
-        containers: 
-          - image: mariadb 
-            name: mariadb 
-            volumeMounts: 
-              - mountPath: /var/lib/mysql 
-                name:      mariadb-data 
-            env: 
-              - name: MYSQL_ROOT_PASSWORD 
-                value: mot-de-passe-root
+  template: 
+    metadata: 
+      labels: 
+        app: mariadb 
+    spec: 
+      volumes: 
+        - name: mariadb-data 
+          persistentVolumeClaim: { claimName: mariadb-data }
+      containers: 
+        - image: mariadb 
+          name: mariadb 
+          volumeMounts: 
+            - mountPath: /var/lib/mysql 
+              name:      mariadb-data 
+          env: 
+            - name: MYSQL_ROOT_PASSWORD 
+              value: mot-de-passe-root
 ---
 apiVersion: v1 
 kind: Service 

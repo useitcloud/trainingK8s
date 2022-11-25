@@ -1,6 +1,7 @@
 # Description
 Dans cette partie on va déployer une base de donnée "mariaDB" avec le manifeste "mariadb-deployment.yaml"
-Observez et decrivez les objets à déployer
+Observez et decrivez les objets à déployer.
+
 ## Déploiement
 Lancez le déployement
 $ kubectl apply -f mariadb-deployment.yaml
