@@ -7,7 +7,7 @@ Lancez le déployement
 $ kubectl apply -f mariadb-deployment.yaml
 
 Affichez les volume et pods
-$ kubectl get pvc, pods
+$ kubectl get pvc,pods
 
 Consultez l’état du pod de MariaDB à l’aide de la commande suivante
 $ kubectl get pods -l app=mariadb

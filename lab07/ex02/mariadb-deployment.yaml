@@ -14,7 +14,7 @@ kind: Deployment
 metadata: 
   labels: 
     app: mariadb 
-    name: mariadb 
+  name: mariadb 
 spec: 
   selector: 
     matchLabels: 
