@@ -1,0 +1,33 @@
+alertmanager: 
+#  ingress: 
+#    enabled: true 
+#    annotations: 
+#      kubernetes.io/tls-acme: "true" 
+#      cert-manager.io/cluster-issuer: letsencrypt-prod 
+#    hosts: 
+#      - "alertmanager.useitcloud.com" 
+#    tls: 
+#      - secretName: alertmanager-useitcloud-com
+#        hosts: 
+#          - "alertmanager.useitcloud.com" 
+
+grafana: 
+ persistence: 
+   enabled: true 
+#  ingress: 
+#    enabled: true 
+#    annotations: 
+#      kubernetes.io/tls-acme: "true" 
+#      cert-manager.io/cluster-issuer: letsencrypt-prod 
+#    hosts: 
+#      - "grafana.useitcloud.com" 
+#    tls: 
+#      - secretName: grafana-useitcloud-com 
+#        hosts: 
+#          - "grafana.useitcloud.com" 
+ 
+# coreDns: 
+#  enabled: false 
+ 
+# kubeDns: 
+#  enabled: true
